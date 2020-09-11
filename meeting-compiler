@@ -1,4 +1,6 @@
 // Given an array of meeting times, return an array of optomized and combined meetings.
+// Time Complexity - 0(n^2)
+// Space Complexity - 0(n)
 
 let array = [
   { startTime: 0,  endTime: 1 }, 
