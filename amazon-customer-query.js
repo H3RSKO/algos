@@ -18,10 +18,8 @@ function searchSuggestions(repository, customerQuery) {
             }
         }
         let i = 1
-        if (filteredQuery.length > 2) {
-            while (i < filteredQuery.length) {
-                inner(filteredQuery, ++i)
-            }
+        while (i < filteredQuery.length) {
+            inner(filteredQuery, ++i)
         }
         return ans
 }
