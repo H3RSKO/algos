@@ -3,11 +3,10 @@
 // Space Complexity - 0(n)
 
 let array = [
-  { startTime: 0,  endTime: 1 },
-  { startTime: 3,  endTime: 5 },
-  { startTime: 4,  endTime: 8 },
-  { startTime: 10, endTime: 12 },
-  { startTime: 9,  endTime: 10 },
+  { startTime: 1, endTime: 10 },
+  { startTime: 2, endTime: 6 },
+  { startTime: 3, endTime: 5 },
+  { startTime: 7, endTime: 9 },
 ]
 
 let meetingApp = (array) => {
@@ -20,7 +19,7 @@ let meetingApp = (array) => {
       if(meeting.endTime < finalMeeting.endTime && meeting.startTime < finalMeeting.startTime) finalMeeting.startTime = meeting.startTime
       else {return}
     })
-    if (!ans.map(x => x.endTime).includes(meeting.endTime) && !ans.map(x => x.startTime).includes(meeting.startTime)) ans[ans.length + 1] = meeting
+    if (!ans.map(x => x.endTime).includes(meeting.endTime) && !ans.map(x => x.startTime).includes(meeting.startTime) && !ans.map(x => x.startTime < meeting.endTime && x.endTime > meeting.endTime)) ans[ans.length + 1] = meeting
   })
   return ans
 }
