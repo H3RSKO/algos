@@ -2,14 +2,14 @@
 // Time Complexity - 0(n^2)
 // Space Complexity - 0(n)
 
-let array = [
+const array = [
   { startTime: 1, endTime: 10 },
   { startTime: 2, endTime: 6 },
   { startTime: 3, endTime: 5 },
   { startTime: 7, endTime: 9 },
 ]
 
-let meetingApp = (array) => {
+const meetingApp = (array) => {
   let ans = []
   array.forEach(meeting => {
     if(ans.length === 0) return ans[0] = meeting
