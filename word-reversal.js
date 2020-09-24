@@ -9,18 +9,28 @@ const message = [  'e', 'v', 'e', 'r', 'y', 'o', 'n', 'e', ' ',
 's', 't', 'e', 'a', 'l' ];
 
 const wordReverser = (message) => {
-  const joinedMessage = message.join('').split(' ') // O(n)
+  debugger;
+  message = reverser(message, 0, message.length - 1)
+  let starter = 0
+  for(let i = 0; i <= message.length; i++) {
+    if(message[i] === ' ' || i === message.length) {
+      reverser(message, starter, i - 1)
+      starter = i + 1
+    }
+  }
+  return message
 
-  let firstElem = 0
-  let lastElem = joinedMessage.length - 1
+}
+
+const reverser = (array, firstElem, lastElem) => {
   while(firstElem < lastElem) {
-    let holder = joinedMessage[firstElem]
-    joinedMessage[firstElem] = joinedMessage[lastElem]
-    joinedMessage[lastElem] = holder
+    let holder = array[firstElem]
+    array[firstElem] = array[lastElem]
+    array[lastElem] = holder
     firstElem++
     lastElem--
   }
-  return joinedMessage.join(' ')
+  return array
 }
 
 console.log(wordReverser(message))
