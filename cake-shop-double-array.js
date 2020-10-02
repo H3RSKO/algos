@@ -9,7 +9,7 @@ const servedOrders  = [17, 8, 19, 12, 24, 2] //false
 
 // solution two
 // Time complexity: O(n)
-// Space Complexity: O(1)
+// Space Complexity: O()
 const serverChecker = (takeOut, eatIn, served) => {
   let takeOutIndex = 0
   let eatInIndex = 0
