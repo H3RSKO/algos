@@ -7,6 +7,7 @@ const movieTimes = [100, 125, 90, 85, 115]; // true
 // ans 1
 // time complexity: O(n log n)
 // space complexity: (1)
+
 // const flightMovieChecker = (flightTime, movies) => {
 //   let ans = false;
 //   let inner = (flightTime, movies, counter = 0) => {
