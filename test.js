@@ -1,16 +1,20 @@
-const factorial = (n) => {
-  if (n < 0) {
-    console.log('n < 0 ', n)
-    return -1
-  }
-  else if (n === 0) {
-    console.log ('n = 0 ', n)
-    return 1
-  }
-  else {
-    console.log('factorial part: n is ', n)
-    return n * factorial(n - 1)
-  }
+const React = require('react')
+
+or
+
+import React, {useState} from 'react'
+import ReactDOM from 'react-dom'
+
+const component = () => {
+  [name, setName] = useState('default')
 }
+
+ReactDOM.render(
+  <div>
+    <app />
+  </div>,
+  document.getElementById('app')
+)
+
 
 console.log(factorial(5))

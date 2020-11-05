@@ -5,7 +5,7 @@ const scores = [20, 50, 19, 83, 49, 50, 12 ]
 const highestScorePossible = 100
 
 const scoreSorter  = (scores, highestScore) => {
-  const ansArray = new Array(highestScore).fill(0)
+  const ansArray = new Array(highestScore + 1).fill(0)
   const ans = []
   scores.forEach(num => {
     ansArray[num] += 1
