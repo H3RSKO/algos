@@ -12,7 +12,7 @@ const hidghestProd = (anArray) => {
   let highestOf2 = anArray[0] * anArray[1]
   let lowestOf2 = anArray[0] * anArray[1]
 
-  let ans = anArray[1] * anArray[2]
+  let ans = anArray[1] * anArray[2] 
 
   for (let i = 2; i < anArray.length; i++) {
     let currentNum = anArray[i]
